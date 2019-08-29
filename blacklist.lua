@@ -10,7 +10,7 @@ if SERVER then
 	function PLUGIN:PlayerAuthed(client, steamid, uniqueid)
 		if blacklist[client:SteamID()] then
 			client:Kick("You are on the blackist of the server, reason:" ..blacklist[client:SteamID()].reason)
-			lient:Ban(0, false)
+			client:Ban(0, false)
 		end
 	end
 end
